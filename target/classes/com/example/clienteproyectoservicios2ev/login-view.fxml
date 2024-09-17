@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+            prefWidth="600.0" style="-fx-background-color: #010c0e; -fx-border-color: #ffc900; -fx-border-width: 6;"
+            xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.clienteproyectoservicios2ev.LoginController">
+    <left>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="root">
+            <children>
+                <ImageView fitHeight="452.0" fitWidth="276.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images/logo.jpg"/>
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </left>
+    <center>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="94.0" fitWidth="97.0" layoutX="104.0" layoutY="38.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images/candado.jpg"/>
+                    </image>
+                </ImageView>
+                <Label layoutY="187.0" text="Nickname" textFill="#ffc900">
+                    <font>
+                        <Font name="Verdana Bold" size="20.0"/>
+                    </font>
+                </Label>
+                <TextField id="nicknameTextField" fx:id="nicknameTextField" layoutX="139.0" layoutY="187.0"
+                           promptText="Ingrese su nickname"/>
+                <Button fx:id="loginBtn" layoutX="78.0" layoutY="297.0" mnemonicParsing="false" prefHeight="47.0"
+                        prefWidth="141.0" style="-fx-background-color: #ffc900;" text="ACCEDER">
+                    <font>
+                        <Font name="System Bold" size="21.0"/>
+                    </font>
+                </Button>
+                <Label fx:id="mensajeError" ellipsisString="" layoutX="14.0" layoutY="240.0" prefHeight="33.0"
+                       prefWidth="279.0" textFill="RED">
+                    <font>
+                        <Font name="System Bold" size="10.0"/>
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

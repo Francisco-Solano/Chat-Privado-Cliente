@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0"
+            prefWidth="503.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.clienteproyectoservicios2ev.ChatController">
+    <left>
+        <HBox prefHeight="360.0" prefWidth="59.0" BorderPane.alignment="CENTER">
+            <children>
+                <VBox alignment="TOP_CENTER" prefHeight="360.0" prefWidth="57.0" styleClass="dark-gray-background"
+                      stylesheets="@../../../cssStyle/styles.css">
+                    <children>
+                        <ImageView fitHeight="83.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../images/icon.png"/>
+                            </image>
+                        </ImageView>
+                        <Pane prefHeight="66.0" prefWidth="40.0"/>
+                        <ImageView fitHeight="36.0" fitWidth="30.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true"
+                                   preserveRatio="true">
+                            <image>
+                                <Image url="@../../../images/campana.png"/>
+                            </image>
+                        </ImageView>
+                        <Pane prefHeight="62.0" prefWidth="62.0"/>
+                        <ImageView fitHeight="30.0" fitWidth="34.0" layoutX="10.0" layoutY="50.0" pickOnBounds="true"
+                                   preserveRatio="true">
+                            <image>
+                                <Image url="@../../../images/usuario-de-perfil.png"/>
+                            </image>
+                        </ImageView>
+                        <Pane prefHeight="57.0" prefWidth="62.0"/>
+                        <ImageView fitHeight="31.0" fitWidth="30.0" layoutX="10.0" layoutY="90.0" pickOnBounds="true"
+                                   preserveRatio="true">
+                            <image>
+                                <Image url="@../../../images/engranaje.png"/>
+                            </image>
+                        </ImageView>
+                        <Pane prefHeight="94.0" prefWidth="40.0"/>
+                        <Button id="exitBtn" mnemonicParsing="false" stylesheets="@../../../cssStyle/styles.css">
+                            <graphic>
+                                <ImageView fitHeight="36.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../images/flecha-de-bucle.png"/>
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <styleClass>
+                                <String fx:value="dark-gray-background"/>
+                                <String fx:value="radius"/>
+                                <String fx:value="transparent-background"/>
+                            </styleClass>
+                        </Button>
+                        <Pane prefHeight="46.0" prefWidth="62.0"/>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </left>
+    <center>
+        <VBox prefHeight="360.0" prefWidth="627.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox alignment="CENTER_LEFT" prefHeight="53.0" prefWidth="300.0">
+                    <children>
+                        <Label text="Tú" textFill="#9da7a7">
+                            <HBox.margin>
+                                <Insets left="20.0"/>
+                            </HBox.margin>
+                            <font>
+                                <Font name="Verdana Bold" size="24.0"/>
+                            </font>
+                        </Label>
+                        <Circle fill="#50c984" radius="5.0" stroke="BLACK" strokeType="INSIDE">
+                            <HBox.margin>
+                                <Insets left="20.0"/>
+                            </HBox.margin>
+                        </Circle>
+                        <Label text="Online" textFill="#c9c9c9">
+                            <font>
+                                <Font name="Verdana Bold" size="14.0"/>
+                            </font>
+                            <HBox.margin>
+                                <Insets left="5.0"/>
+                            </HBox.margin>
+                        </Label>
+                        <Pane prefHeight="54.0" prefWidth="46.0"/>
+                        <ImageView fitHeight="25.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../images/llamada-telefonica.png"/>
+                            </image>
+                            <HBox.margin>
+                                <Insets/>
+                            </HBox.margin>
+                        </ImageView>
+                        <ImageView fitHeight="28.0" fitWidth="24.0" layoutX="150.0" layoutY="17.0" pickOnBounds="true"
+                                   preserveRatio="true">
+                            <image>
+                                <Image url="@../../../images/boton-facetime.png"/>
+                            </image>
+                            <HBox.margin>
+                                <Insets left="10.0"/>
+                            </HBox.margin>
+                        </ImageView>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="189.0" layoutY="17.0" pickOnBounds="true"
+                                   preserveRatio="true">
+                            <image>
+                                <Image url="@../../../images/mas.png"/>
+                            </image>
+                            <HBox.margin>
+                                <Insets left="10.0"/>
+                            </HBox.margin>
+                        </ImageView>
+                    </children>
+                    <VBox.margin>
+                        <Insets/>
+                    </VBox.margin>
+                </HBox>
+                <ScrollPane prefHeight="266.0" prefWidth="126.0">
+                    <content>
+                        <Pane prefHeight="260.0" prefWidth="424.0">
+                            <children>
+                                <ImageView fitHeight="146.0" fitWidth="116.0" layoutX="181.0" layoutY="100.0"
+                                           pickOnBounds="true" preserveRatio="true"/>
+                                <TextFlow fx:id="messageInput" prefHeight="266.0" prefWidth="429.0"
+                                          style="-fx-control-inner-background: #ecf0f1; -fx-font-size: 14px; -fx-border-color: #bdc3c7; -fx-border-width: 1px; -fx-border-radius: 5px;">
+                                </TextFlow>
+
+                            </children>
+                        </Pane>
+                    </content>
+                </ScrollPane>
+                <HBox alignment="CENTER" prefHeight="40.0" prefWidth="300.0">
+                    <children>
+                        <ImageView fitHeight="28.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../images/felicidad.png"/>
+                            </image>
+                            <HBox.margin>
+                                <Insets top="3.0"/>
+                            </HBox.margin>
+                        </ImageView>
+                        <Button id="imageBtn" mnemonicParsing="false" stylesheets="@../../../cssStyle/styles.css">
+                            <graphic>
+                                <ImageView fitHeight="34.0" fitWidth="26.0" layoutX="10.0" layoutY="10.0"
+                                           pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../images/camara.jpg"/>
+                                    </image>
+                                    <HBox.margin>
+                                        <Insets left="10.0"/>
+                                    </HBox.margin>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Pane prefHeight="40.0" prefWidth="8.0"/>
+                        <TextField fx:id="messageArea" promptText="Escribe algo..." styleClass="radius"
+                                   stylesheets="@../../../cssStyle/styles.css"/>
+                        <Pane prefHeight="40.0" prefWidth="25.0"/>
+                        <Button id="messageBtn" mnemonicParsing="false" onAction="#onSendButtonClicked"
+                                stylesheets="@../../../cssStyle/styles.css">
+                            <graphic>
+                                <ImageView fx:id="imageDisplay" fitHeight="25.0" fitWidth="27.0" pickOnBounds="true"
+                                           preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../images/enviar-mensaje.png"/>
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <HBox.margin>
+                                <Insets left="-5.0"/>
+                            </HBox.margin>
+                            <styleClass>
+                                <String fx:value="radius"/>
+                                <String fx:value="transparent-background"/>
+                            </styleClass>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>
